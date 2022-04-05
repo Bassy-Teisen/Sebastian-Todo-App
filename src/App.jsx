@@ -12,8 +12,9 @@ import DeletedTodos from './components/DeletedTodos'
 function App() {
   const [showAddTodo, setShowAddTodo] = useState(false)
   const [todos, setTodos] = useState([])
+  const [binTodos, setBinTodos] = useState(false)
 
-  
+
   useEffect(() => {
     const getTodos = async () => {
       const todosFromServer = await fetchTodos()
@@ -22,6 +23,7 @@ function App() {
     }
     getTodos()
   }, [])
+
 
   const fetchTodos = async () => {
     const res = await fetch('http://localhost:5000/todos')
@@ -69,14 +71,23 @@ function App() {
 
     setTodos(todos.map((todo) => todo.id === id ? {...todo, high: !todo.high} : todo))
   }
+  const sendToTrash = async (id) => {
+    const trashTodo = await fetchTodo(id)
+    const upDateBinTodo = {...trashTodo, binTodo: true}
+    console.log(trashTodo)
+    const res = await fetch(`http://localhost:5000/todos/${id}`, {method: 'PUT', headers: {'Content-type': 'application/json'}, body: JSON.stringify(upDateBinTodo) })
+
+    const data = await res.json()
+
+    setBinTodos(todos.map((todo) => todo.id === id ? {...todo, binTodo: true} : todo))
+  }
   return (
     <BrowserRouter > 
     <div className="App">
       <Header showAdd={showAddTodo} onAdd={() => setShowAddTodo(!showAddTodo) } title={"Todo App"}/>
       <Routes>
-          <Route  path='/' element={<Home addTodo={addTodo} todos={todos} togglePriority={togglePriority} deleteTodo={deleteTodo} showAddTodo={showAddTodo} />}/>
-          <Route path='/deleteTodo'  element={<DeletedTodos />}/>
-
+          <Route  path='/' element={<Home sendToTrash={sendToTrash} addTodo={addTodo} todos={todos} togglePriority={togglePriority} deleteTodo={deleteTodo} showAddTodo={showAddTodo} />}/>
+          <Route path='/DeletedTodos'  element={<DeletedTodos onDelete={deleteTodo} binTodos={binTodos} todos={todos}/>}/>
       </Routes>
       <Footer />
     </div>

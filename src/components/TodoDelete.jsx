@@ -4,13 +4,9 @@ import { FcHighPriority, FcLowPriority } from 'react-icons/fc'
 import { ListGroup } from "react-bootstrap"
 import "../App.css"
 
-const Todo = ({todo, sendToTrash, onDelete, onToggle }) => {
-
-    
-
+const TodoDelete = ({todo, onDelete, onToggle }) => {
     return (
     <div  onDoubleClick={() => onToggle(todo.id)}>
-            
                 <ListGroup as="ul">
                     <ListGroup.Item as="li" >
                         <h2>{todo.todoTitle}</h2>
@@ -20,7 +16,7 @@ const Todo = ({todo, sendToTrash, onDelete, onToggle }) => {
                     </ListGroup.Item>
                 </ListGroup>
                 <div className='bin'>
-                    <AiFillDelete size={40} style={{ color: 'black', cursor: 'pointer'}} onClick={() => sendToTrash(todo.id)} />
+                    <AiFillDelete size={40} style={{ color: 'black', cursor: 'pointer'}} onClick={() => onDelete(todo.id)} />
                     <div>
                     <h6 className='double'>Double Click</h6>
                     {todo.high ? <FcHighPriority size={40} style={{ color: 'red', cursor: 'pointer'} }/>: <FcLowPriority size={40} style={{ color: 'green', cursor: 'pointer'}} /> }
@@ -32,4 +28,4 @@ const Todo = ({todo, sendToTrash, onDelete, onToggle }) => {
     )
 }
 
-export default Todo
+export default TodoDelete
