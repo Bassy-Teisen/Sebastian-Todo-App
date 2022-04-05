@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <footer>
-             {location.pathname === '/' && <Link to="/DeletedTodos">Deleted Todos</Link> }
+             {location.pathname === '/' && <Link to="./About">Todos</Link> }
             <p>Copyright &copy; 2022</p>
         </footer>
     )

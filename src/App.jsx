@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Footer from './components/Footer'
+import About from './components/About'
 
 
 
@@ -74,6 +75,7 @@ function App() {
       <Header showAdd={showAddTodo} onAdd={() => setShowAddTodo(!showAddTodo) } title={"Todo App"}/>
       <Routes>
           <Route  path='/' element={<Home addTodo={addTodo} todos={todos} togglePriority={togglePriority} deleteTaodo={deleteTodo} showAddTodo={showAddTodo} />}/>
+          <Route path='./About'  element={<About />}/>
       </Routes>
       <Footer />
     </div>
