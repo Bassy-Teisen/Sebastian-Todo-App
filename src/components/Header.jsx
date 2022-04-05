@@ -1,11 +1,14 @@
-import '../App.css'
+import TodoButton from "./TodoButton"
 
-const Header = () => {
-    
+const Header = ({title, onAdd, showAdd}) => {
 
     return (
         <header className="header">
-            <h1>Todo App</h1>
+            <h1>{title}</h1>
+               <div className='add'>
+                    
+                    <TodoButton color={showAdd ? "red" : "green"} text={showAdd ? "close" : "Add" } onClick={onAdd}/>          
+                </div>
         </header>
     )
 
