@@ -1,14 +1,21 @@
 import Header from './components/Header'
 import { useState } from 'react'
+import { Container, Row } from 'react-bootstrap'
 import './App.css'
+import AddTodo from './components/AddTodo'
 
 function App() {
-  const [showAddTask, setShowAddTask] = useState(false)
+  const [showAddTodo, setShowAddTodo] = useState(false)
 
 
   return (
     <div className="App">
-        <Header showAdd={showAddTask} onAdd={() => setShowAddTask(!showAddTask) } title={"Todo App"}/>
+        <Header showAdd={showAddTodo} onAdd={() => setShowAddTodo(!showAddTodo) } title={"Todo App"}/>
+        <Container >
+          <Row className="justify-content-center" >
+              {showAddTodo && <AddTodo /> }
+          </Row>
+      </Container>
     </div>
   )
 }
