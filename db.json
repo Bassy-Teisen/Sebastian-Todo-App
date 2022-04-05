@@ -1,53 +1,59 @@
 {
   "todos": [
     {
-      "todoTitle": "agvcg",
-      "description": "agcsd",
-      "high": false,
-      "id": 10,
-      "binTodo": true
-    },
-    {
-      "todoTitle": "secgfcdbgnv",
-      "description": "hsdxcgfh",
-      "high": false,
-      "id": 12,
-      "binTodo": true
-    },
-    {
-      "todoTitle": "cgszfxd",
-      "description": "scx",
-      "high": false,
-      "id": 13,
-      "binTodo": false
-    },
-    {
-      "todoTitle": "exfegcwrtbnyv",
-      "description": " fesxqg",
+      "todoTitle": "Washing ",
+      "description": "Whites\nSheets\nWork clothes - Need these for tomorrow",
       "high": true,
-      "id": 15,
+      "id": 1,
       "binTodo": true
     },
     {
-      "todoTitle": "dfhv",
-      "description": "hgsfdcxcv",
+      "todoTitle": "Pick up cat medicine at vet",
+      "description": "Already paid for",
       "high": false,
-      "id": 16,
-      "binTodo": true
+      "id": 2
     },
     {
-      "todoTitle": "vcfgd",
-      "description": "dgfcxsf",
-      "high": true,
-      "id": 17,
-      "binTodo": true
+      "todoTitle": "Buy pool salt",
+      "description": "Call in advance as they might be out.",
+      "high": false,
+      "id": 3
     },
     {
-      "todoTitle": "svcgf",
-      "description": "cdgrzgrfrsgsz",
+      "todoTitle": "Book in car service",
+      "description": "90,000 kms ",
       "high": true,
-      "id": 18,
-      "binTodo": true
+      "id": 4
+    },
+    {
+      "todoTitle": "Fill up dog food container",
+      "description": "Food is in the shed",
+      "high": true,
+      "id": 5
+    },
+    {
+      "todoTitle": "Ring mum to see if shes coming for dinner next week",
+      "description": "Tell her to bring a salad",
+      "high": false,
+      "id": 6
+    },
+    {
+      "todoTitle": "Clean the pool fence glass",
+      "description": "Try the new windex hose sprayer",
+      "high": false,
+      "id": 7
+    },
+    {
+      "todoTitle": "Clean out the fridge",
+      "description": "Check expiry on sauces",
+      "high": true,
+      "id": 8
+    },
+    {
+      "todoTitle": "Buy a new desk pad",
+      "description": "Check what brand Josh's is first",
+      "high": false,
+      "id": 9
     }
   ]
 }

@@ -58,3 +58,17 @@
   width:100%;
   background-color: white;
 }
+
+.toTop {
+  display: flex;
+  justify-content: end;
+  padding: .5rem;
+  margin: .5rem;
+}
+
+.opOn {
+  opacity: 100%;
+}
+.opOff {
+  opacity: 0%;
+}

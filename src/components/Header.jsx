@@ -11,7 +11,8 @@ const Header = ({title, onAdd, showAdd}) => {
                <div className='add'>
                     {/* logic for displaying the add todo button and text */}
                     {!showAdd && location.pathname === '/' ? <h3 className='click' >Click to Add a Todo</h3> : ""}
-                    {location.pathname === '/' && <TodoButton color={showAdd ? "red" : "green"} text={showAdd ? "close" : "Add" } onClick={onAdd}/> }         
+                    {location.pathname === '/' && <TodoButton color={showAdd ? "red" : "green"} text={showAdd ? "close" : "Add" } onClick={onAdd}/> }    
+                    {location.pathname === '/DeletedTodos' ? <h2>Deleted Todos</h2> : ""}
                 </div>
         </header>
     )
