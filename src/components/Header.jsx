@@ -7,9 +7,9 @@ const Header = ({title, onAdd, showAdd}) => {
 
     return (
         <header >
-            <h1 className="appTitle">{title}</h1>
+            <h1 className="app">{title}</h1>
                <div className='add'>
-                    {!showAdd ? <h3 className='click' >Click to Add a Todo</h3> : ""}
+                    {!showAdd && location.pathname === '/' ? <h3 className='click' >Click to Add a Todo</h3> : ""}
                     {location.pathname === '/' && <TodoButton color={showAdd ? "red" : "green"} text={showAdd ? "close" : "Add" } onClick={onAdd}/> }         
                 </div>
         </header>

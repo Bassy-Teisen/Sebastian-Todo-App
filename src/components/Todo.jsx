@@ -5,9 +5,7 @@ import { ListGroup } from "react-bootstrap"
 import "../App.css"
 
 const Todo = ({todo, sendToTrash, onDelete, onToggle }) => {
-
     
-
     return (
     <div  onDoubleClick={() => onToggle(todo.id)}>
             

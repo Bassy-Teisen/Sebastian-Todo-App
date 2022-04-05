@@ -74,12 +74,20 @@ function App() {
   const sendToTrash = async (id) => {
     const trashTodo = await fetchTodo(id)
     const upDateBinTodo = {...trashTodo, binTodo: true}
-    console.log(trashTodo)
     const res = await fetch(`http://localhost:5000/todos/${id}`, {method: 'PUT', headers: {'Content-type': 'application/json'}, body: JSON.stringify(upDateBinTodo) })
 
     const data = await res.json()
 
     setBinTodos(todos.map((todo) => todo.id === id ? {...todo, binTodo: true} : todo))
+  }
+  const sendBack= async (id) => {
+    const trashTodo = await fetchTodo(id)
+    const upDateBinTodo = {...trashTodo, binTodo: false}
+    const res = await fetch(`http://localhost:5000/todos/${id}`, {method: 'PUT', headers: {'Content-type': 'application/json'}, body: JSON.stringify(upDateBinTodo) })
+
+    const data = await res.json()
+
+    setBinTodos(todos.map((todo) => todo.id === id ? {...todo, binTodo: false} : todo))
   }
   return (
     <BrowserRouter > 
@@ -87,7 +95,7 @@ function App() {
       <Header showAdd={showAddTodo} onAdd={() => setShowAddTodo(!showAddTodo) } title={"Todo App"}/>
       <Routes>
           <Route  path='/' element={<Home sendToTrash={sendToTrash} addTodo={addTodo} todos={todos} togglePriority={togglePriority} deleteTodo={deleteTodo} showAddTodo={showAddTodo} />}/>
-          <Route path='/DeletedTodos'  element={<DeletedTodos onDelete={deleteTodo} binTodos={binTodos} todos={todos}/>}/>
+          <Route path='/DeletedTodos'  element={<DeletedTodos sendBack={sendBack} onDelete={deleteTodo} binTodos={binTodos} todos={todos}/>}/>
       </Routes>
       <Footer />
     </div>

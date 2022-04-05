@@ -1,8 +1,8 @@
-import { Card } from "react-bootstrap"
+import { Card, Row, Container } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import TodoDelete from "./TodoDelete"
 
-const DeletedTodos = ({todos, onDelete, onToggle }) => {
+const DeletedTodos = ({todos, onDelete, sendBack, onToggle }) => {
 
         const trashList = []
         for (const [index, value] of todos.entries()) {
@@ -17,14 +17,17 @@ const DeletedTodos = ({todos, onDelete, onToggle }) => {
         const todoList = [...sortTop, ...sortLow]
 
         return (
-            <>
+            <Container >
+                <Row className="justify-content-center" >
                 {trashList.map((todo, index) => (
+                    
                     <Card  key={index} style={{ maxWidth: '40%', minWidth: "300px" }}>
-                        <Card.Body ><TodoDelete key={index} todo={todo} onDelete={onDelete} onToggle={onToggle} /></Card.Body> 
+                        <Card.Body ><TodoDelete sendBack={sendBack} key={index} todo={todo} onDelete={onDelete} onToggle={onToggle} /></Card.Body> 
                     </Card>
                 ))}
+                </Row>
                 <Link to="/">Go Back</Link>
-            </>
+                </Container>
         )
     }
  

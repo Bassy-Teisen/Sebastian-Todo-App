@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: lightgray;
+  height: 100vh;
 }
 .card {
   text-align: center;
@@ -43,4 +44,8 @@
 
 .description {
   justify-content: start;
+}
+
+.footer {
+  
 }
