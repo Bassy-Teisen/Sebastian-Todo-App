@@ -1,3 +1,30 @@
 .App {
   text-align: center;
 }
+.card {
+  text-align: center;
+  margin: 15px;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  margin: 4rem;
+}
+
+
+.click {
+  margin-right: 7%;
+}
+
+.bin {
+  display: flex;
+  justify-content: space-between;
+  margin: .5rem
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+}

@@ -9,7 +9,7 @@
     {
       "todoTitle": "low",
       "description": "low",
-      "high": false,
+      "high": true,
       "id": 8
     },
     {

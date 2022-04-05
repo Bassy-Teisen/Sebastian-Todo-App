@@ -61,11 +61,11 @@ function App() {
     const todoToToggle = await fetchTodo(id)
     const updTodo = {...todoToToggle, high: !todoToToggle.high}
 
-    const res = await fetch(`http://localhost:5000/todos/${id}`, {method: 'PUT', headers: {'Content-type': 'application/json'}, body: JSON.stringify(updTask) })
+    const res = await fetch(`http://localhost:5000/todos/${id}`, {method: 'PUT', headers: {'Content-type': 'application/json'}, body: JSON.stringify(updTodo) })
 
     const data = await res.json()
 
-    setTasks(todos.map((todo) => todo.id === id ? {...todo, high: !todo.high} : todo))
+    setTodos(todos.map((todo) => todo.id === id ? {...todo, high: !todo.high} : todo))
   }
   return (
     <div className="App">

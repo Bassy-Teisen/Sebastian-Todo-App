@@ -7,7 +7,6 @@ const Todos = ({todos, onDelete, onToggle }) => {
     const sortTop = []
     const sortLow = []
     for (const [index, value] of todos.entries()) {
-        console.log(value.high)
         {value.high ? sortTop.push(value) : sortLow.push(value)}
     }
 
