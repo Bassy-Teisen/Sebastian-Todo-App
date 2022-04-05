@@ -29,7 +29,7 @@
 .bin {
   display: flex;
   justify-content: space-between;
-  margin: .5rem
+  margin: .5rem;
 }
 
 .check {

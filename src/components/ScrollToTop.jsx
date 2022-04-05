@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BiArrowFromBottom } from 'react-icons/bi'
+import Button from 'react-bootstrap/Button'
 import "../App.css"
 
 // ScrollToTop is displayed once page offset reaches above 300
@@ -30,7 +31,9 @@ const ScrollToTop = () => {
     return (
         // This is the button and it uses className for CSS position etc
         <div className="toTop">
-            <button className={isVisable ? "opOn" : "opOff" } type="button" onClick={scrollToTop} ><BiArrowFromBottom /></button>
+                <Button className={isVisable ? "opOn" : "opOff" } type="button" onClick={scrollToTop} >
+                    <BiArrowFromBottom />
+                </Button>
         </div>
     )
 }
