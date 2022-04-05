@@ -1,10 +1,10 @@
 import Header from './components/Header'
 import { useState, useEffect } from 'react'
-import { Container, Row } from 'react-bootstrap'
 import './App.css'
-import AddTodo from './components/AddTodo'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Todos from './components/Todos'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
+
 
 
 function App() {
@@ -68,15 +68,14 @@ function App() {
     setTodos(todos.map((todo) => todo.id === id ? {...todo, high: !todo.high} : todo))
   }
   return (
+    <BrowserRouter > 
     <div className="App">
       <Header showAdd={showAddTodo} onAdd={() => setShowAddTodo(!showAddTodo) } title={"Todo App"}/>
-        <Container >
-          <Row className="justify-content-center" >
-              {showAddTodo && <AddTodo onAdd={addTodo}/> }
-              {todos.length >0 ? <Todos todos={todos} onDelete={deleteTodo} onToggle={togglePriority} /> : "No tasks to show"}
-          </Row>
-      </Container>
+      <Routes>
+          <Route  path='/' element={<Home addTodo={addTodo} todos={todos} togglePriority={togglePriority} deleteTaodo={deleteTodo} showAddTodo={showAddTodo} />}/>
+      </Routes>
     </div>
+    </BrowserRouter>
   )
 }
 

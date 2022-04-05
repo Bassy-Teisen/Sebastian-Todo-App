@@ -1,13 +1,16 @@
 import TodoButton from "./TodoButton"
+import { useLocation } from 'react-router-dom' 
+
 
 const Header = ({title, onAdd, showAdd}) => {
+    const location = useLocation()
 
     return (
         <header className="header">
             <h1>{title}</h1>
                <div className='add'>
-                    
-                    <TodoButton color={showAdd ? "red" : "green"} text={showAdd ? "close" : "Add" } onClick={onAdd}/>          
+                    {!showAdd ? <h3 className='click' >Click to Add a Todo</h3> : ""}
+                    {location.pathname === '/' && <TodoButton color={showAdd ? "red" : "green"} text={showAdd ? "close" : "Add" } onClick={onAdd}/> }         
                 </div>
         </header>
     )
