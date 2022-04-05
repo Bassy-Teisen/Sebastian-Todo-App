@@ -3,13 +3,13 @@ import { Form, Row, Col, Button } from 'react-bootstrap'
 import "../App.css"
 
 const AddTodo = ({ onAdd }) => {
-    const [todo, setTodo] = useState('')
+    const [todoTitle, setTodoTitle] = useState('')
     const [description, setDescription] = useState('')
     const [high, setHighPriority] = useState(false)
 
     const onSubmit = (e) => {
         e.preventDefault()
-        if(!todo) {
+        if(!todoTitle) {
             alert('Please add a task todo!')
             return
         }
@@ -17,8 +17,8 @@ const AddTodo = ({ onAdd }) => {
             alert('Please add a description!')
             return
         }
-        onAdd({ todo, description, high })
-        setTodo("")
+        onAdd({ todoTitle, description, high })
+        setTodoTitle("")
         setDescription("")
         setHighPriority(false)
     }
@@ -27,10 +27,10 @@ const AddTodo = ({ onAdd }) => {
         <Form onSubmit={onSubmit} >
         <Form.Group as={Row} className="mb-3" >
             <Form.Label column sm={2}>
-                Todo Task
+                Todo Title
             </Form.Label>
             <Col sm={10}>
-                <Form.Control type="text" placeholder="Todo" value={todo} onChange={(e) => setTodo(e.target.value)} />
+                <Form.Control type="text" placeholder="Todo" value={todoTitle} onChange={(e) => setTodoTitle(e.target.value)} />
             </Col>
         </Form.Group>
         <Form.Group as={Row} className="mb-3" >
