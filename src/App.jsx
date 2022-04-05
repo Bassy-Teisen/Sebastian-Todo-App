@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import './App.css'
 import AddTodo from './components/AddTodo'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   const [showAddTodo, setShowAddTodo] = useState(false)
