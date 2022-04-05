@@ -1,9 +1,15 @@
 .App {
   text-align: center;
+  background-color: lightgray;
 }
 .card {
   text-align: center;
   margin: 15px;
+  
+}
+
+.appTitle {
+  padding: 1rem;
 }
 
 .add {
@@ -27,4 +33,14 @@
   display: flex;
   align-items: center;
   margin-left: 0px;
+  
+}
+
+.double {
+  display: inline-flex;
+  margin-right: 1rem;
+}
+
+.description {
+  justify-content: start;
 }

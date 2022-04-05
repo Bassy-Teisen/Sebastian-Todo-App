@@ -7,20 +7,23 @@ const Todo = ({todo, onDelete, onToggle }) => {
 
     return (
     <div  onDoubleClick={() => onToggle(todo.id)}>
-            <h3>
+            
                 <ListGroup as="ul">
                     <ListGroup.Item as="li" >
-                        {todo.todoTitle}
+                        <h2>{todo.todoTitle}</h2>
                     </ListGroup.Item>
-                    <ListGroup.Item as="li">
-                        {todo.description}
+                    <ListGroup.Item className="d-flex justify-content-between align-items-start" as="li">
+                        <p>{todo.description}</p>
                     </ListGroup.Item>
                 </ListGroup>
                 <div className='bin'>
                     <AiFillDelete size={40} style={{ color: 'black', cursor: 'pointer'}} onClick={() => onDelete(todo.id)} />
+                    <div>
+                    <h6 className='double'>Double Click</h6>
                     {todo.high ? <FcHighPriority size={40} style={{ color: 'red', cursor: 'pointer'} }/>: <FcLowPriority size={40} style={{ color: 'green', cursor: 'pointer'}} /> }
-                </div>
-            </h3>
+                    </div>
+               
+            </div>
             <p></p>
         </div>
     )

@@ -4,9 +4,9 @@ const TodoButton = ({color, text, onClick}) => {
 
 
     return (
-        <header className="header">
+        <div>
             <Button style={{ backgroundColor: color}} className="button" onClick={onClick} >{text}</Button>
-        </header>
+        </div>
     )
 }
 

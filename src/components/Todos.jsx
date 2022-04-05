@@ -14,8 +14,8 @@ const Todos = ({todos, onDelete, onToggle }) => {
     return (
         <>
             {todoList.map((todo, index) => (
-                <Card key={index} style={{ maxWidth: '40%', minWidth: "300px" }}>
-                    <Card.Body><Todo key={index} todo={todo} onDelete={onDelete} onToggle={onToggle} /></Card.Body> 
+                <Card  key={index} style={{ maxWidth: '40%', minWidth: "300px" }}>
+                    <Card.Body ><Todo key={index} todo={todo} onDelete={onDelete} onToggle={onToggle} /></Card.Body> 
                 </Card>
             ))}
         </>

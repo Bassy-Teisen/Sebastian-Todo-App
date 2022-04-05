@@ -1,15 +1,9 @@
 {
   "todos": [
     {
-      "todoTitle": "washing",
-      "description": "clothes",
-      "high": true,
-      "id": 1
-    },
-    {
       "todoTitle": "low",
       "description": "low",
-      "high": true,
+      "high": false,
       "id": 8
     },
     {
