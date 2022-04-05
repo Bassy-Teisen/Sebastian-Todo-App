@@ -1,18 +1,13 @@
 import Button from 'react-bootstrap/Button'
 
 const TodoButton = ({color, text, onClick}) => {
-
     
     return (
         <div>
+            {/* button used to open add todo form */}
             <Button style={{ backgroundColor: color}} className="button" onClick={onClick} >{text}</Button>
         </div>
     )
-}
-
-TodoButton.defaultProps = {
-    color: 'purple',
-    text: "default test"
 }
 
 export default TodoButton 

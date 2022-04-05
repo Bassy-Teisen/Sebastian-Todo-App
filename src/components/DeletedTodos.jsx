@@ -4,23 +4,17 @@ import TodoDelete from "./TodoDelete"
 
 const DeletedTodos = ({todos, onDelete, sendBack, onToggle }) => {
 
+        // sorts out the todos sent to trash and stores them in trashlist
         const trashList = []
         for (const [index, value] of todos.entries()) {
             {value.binTodo ? trashList.push(value) : "" }
         }
-        const sortTop = []
-        const sortLow = []
-        for (const [index, value] of trashList.entries()) {
-            {value.high ? sortTop.push(value) : sortLow.push(value)}
-        }
-    
-        const todoList = [...sortTop, ...sortLow]
 
         return (
             <Container >
                 <Row className="justify-content-center" >
+                {/* used to display individual todos */}
                 {trashList.map((todo, index) => (
-                    
                     <Card  key={index} style={{ maxWidth: '40%', minWidth: "300px" }}>
                         <Card.Body ><TodoDelete sendBack={sendBack} key={index} todo={todo} onDelete={onDelete} onToggle={onToggle} /></Card.Body> 
                     </Card>
