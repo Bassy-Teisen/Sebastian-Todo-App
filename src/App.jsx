@@ -84,7 +84,7 @@ function App() {
 
     const data = await res.json()
 
-    setBinTodos(todos.map((todo) => todo.id === id ? {...todo, binTodo: true} : todo))
+    setTodos(todos.map((todo) => todo.id === id ? {...todo, binTodo: true} : todo))
   }
 
   // used for changing binTodo from true to false as means of sending back from trash
@@ -95,7 +95,7 @@ function App() {
 
     const data = await res.json()
 
-    setBinTodos(todos.map((todo) => todo.id === id ? {...todo, binTodo: false} : todo))
+    setTodos(todos.map((todo) => todo.id === id ? {...todo, binTodo: false} : todo))
   }
 
   return (

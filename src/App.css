@@ -72,3 +72,7 @@
 .opOff {
   opacity: 0%;
 }
+
+.container {
+  min-height: 70vh;
+}
