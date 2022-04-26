@@ -1,9 +1,19 @@
+
+
 .App {
   text-align: center;
+  background-color: lightgray;
+  height: 100%;
+  padding-top: 3rem;
 }
+
 .card {
   text-align: center;
   margin: 15px;
+}
+
+.appTitle {
+  padding: 1rem;
 }
 
 .add {
@@ -12,7 +22,6 @@
   margin: 4rem;
 }
 
-
 .click {
   margin-right: 7%;
 }
@@ -20,11 +29,50 @@
 .bin {
   display: flex;
   justify-content: space-between;
-  margin: .5rem
+  margin: .5rem;
 }
 
 .check {
   display: flex;
   align-items: center;
   margin-left: 0px;
+  
+}
+
+.double {
+  display: inline-flex;
+  margin-right: 1rem;
+}
+
+.description {
+  justify-content: start;
+}
+
+.footer {
+  bottom: 0;
+  color: #707070;
+  height: 4em;
+  left: 0;
+  position: relative;
+  font-size: small;
+  width:100%;
+  background-color: white;
+}
+
+.toTop {
+  display: flex;
+  justify-content: end;
+  padding: .5rem;
+  margin: .5rem;
+}
+
+.opOn {
+  opacity: 100%;
+}
+.opOff {
+  opacity: 0%;
+}
+
+.container {
+  min-height: 70vh;
 }

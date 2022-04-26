@@ -6,8 +6,10 @@ const Footer = () => {
     const location = useLocation()
 
     return (
-        <footer>
-             {location.pathname === '/' && <Link to="./About">Todos</Link> }
+        <footer className="footer">
+            
+            {/* conditional display of deleted todos */}
+             {location.pathname === '/' && <Link to="/DeletedTodos">Deleted Todos</Link> }
             <p>Copyright &copy; 2022</p>
         </footer>
     )

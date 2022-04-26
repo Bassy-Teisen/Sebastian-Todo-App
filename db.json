@@ -1,40 +1,67 @@
 {
   "todos": [
     {
-      "todoTitle": "washing",
-      "description": "clothes",
-      "high": true,
-      "id": 1
+      "todotitle": "Washing ",
+      "description": "Whites\nSheets\nWork clothes - Need these for tomorrow",
+      "priority": true,
+      "id": 1,
+      "trash": false
     },
     {
-      "todoTitle": "low",
-      "description": "low",
-      "high": true,
-      "id": 8
+      "todotitle": "Pick up cat medicine at vet",
+      "description": "Already paid for",
+      "priority": true,
+      "id": 2,
+      "trash": true
     },
     {
-      "todoTitle": "to",
-      "description": "to",
-      "high": false,
-      "id": 9
+      "todotitle": "Buy pool salt",
+      "description": "Call in advance as they might be out.",
+      "priority": false,
+      "id": 3,
+      "trash": false
     },
     {
-      "todoTitle": "agvcg",
-      "description": "agcsd",
-      "high": false,
-      "id": 10
+      "todotitle": "Book in car service",
+      "description": "90,000 kms ",
+      "priority": false,
+      "id": 4,
+      "trash": true
     },
     {
-      "todoTitle": "sdazfgggggfgssf:Liksjf=pskdagfiq0tlku/dlsgjd's-dl9'[ejsA-ldkpsl=0",
-      "description": "dsafdsjhkjabnkpcn .header {\n    justify-content: center;\n\n}",
-      "high": false,
-      "id": 11
+      "todotitle": "Fill up dog food container",
+      "description": "Food is in the shed",
+      "priority": false,
+      "id": 5,
+      "trash": true
     },
     {
-      "todoTitle": "5ut6yu5",
-      "description": "etf6ry",
-      "high": false,
-      "id": 12
+      "todotitle": "Ring mum to see if shes coming for dinner next week",
+      "description": "Tell her to bring a salad",
+      "priority": false,
+      "id": 6,
+      "trash": false
+    },
+    {
+      "todotitle": "Clean the pool fence glass",
+      "description": "Try the new windex hose sprayer",
+      "priority": false,
+      "id": 7,
+      "trash": false
+    },
+    {
+      "todotitle": "Clean out the fridge",
+      "description": "Check expiry on sauces",
+      "priority": false,
+      "id": 8,
+      "trash": true
+    },
+    {
+      "todotitle": "Buy a new desk pad",
+      "description": "Check what brand Josh's is first",
+      "priority": false,
+      "id": 9,
+      "trash": false
     }
   ]
 }
