@@ -5,41 +5,53 @@
       "description": "Whites\nSheets\nWork clothes - Need these for tomorrow",
       "priority": true,
       "id": 1,
-      "trash": true
-    },
-    {
-      "todotitle": "Buy pool salt",
-      "description": "Call in advance as they might be out.",
-      "priority": false,
-      "id": 3,
-      "trash": true
-    },
-    {
-      "todotitle": "Clean the pool fence glass",
-      "description": "Try the new windex hose sprayer",
-      "priority": false,
-      "id": 7,
-      "trash": true
-    },
-    {
-      "todotitle": "Clean out the fridge",
-      "description": "Check expiry on sauces",
-      "priority": false,
-      "id": 8,
       "trash": false
     },
     {
-      "todotitle": "Buy a new desk pad",
-      "description": "Check what brand Josh's is first",
-      "priority": false,
-      "id": 9,
-      "trash": false
+      "updTodo": {
+        "todotitle": "Buy pool salt",
+        "description": "Call in advance as they might be out.",
+        "priority": true,
+        "id": 3,
+        "trash": false
+      },
+      "id": 3
+    },
+    {
+      "updTodo": {
+        "todotitle": "Clean the pool fence glass",
+        "description": "Try the new windex hose sprayer",
+        "priority": true,
+        "id": 7,
+        "trash": false
+      },
+      "id": 7
+    },
+    {
+      "updTodo": {
+        "todotitle": "Clean out the fridge",
+        "description": "Check expiry on sauces",
+        "priority": true,
+        "id": 8,
+        "trash": false
+      },
+      "id": 8
+    },
+    {
+      "updTodo": {
+        "todotitle": "Buy a new desk pad",
+        "description": "Check what brand Josh's is first",
+        "priority": true,
+        "id": 9,
+        "trash": false
+      },
+      "id": 9
     },
     {
       "todotitle": "ryteugh",
       "description": "This aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.",
       "priority": false,
-      "trash": true,
+      "trash": false,
       "id": 10
     }
   ]
