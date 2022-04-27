@@ -5,27 +5,20 @@
       "description": "Whites\nSheets\nWork clothes - Need these for tomorrow",
       "priority": true,
       "id": 1,
-      "trash": false
+      "trash": true
     },
     {
       "todotitle": "Pick up cat medicine at vet",
       "description": "Already paid for",
       "priority": true,
       "id": 2,
-      "trash": true
+      "trash": false
     },
     {
       "todotitle": "Buy pool salt",
       "description": "Call in advance as they might be out.",
       "priority": false,
       "id": 3,
-      "trash": false
-    },
-    {
-      "todotitle": "Book in car service",
-      "description": "90,000 kms ",
-      "priority": false,
-      "id": 4,
       "trash": true
     },
     {
@@ -33,7 +26,7 @@
       "description": "Food is in the shed",
       "priority": false,
       "id": 5,
-      "trash": true
+      "trash": false
     },
     {
       "todotitle": "Ring mum to see if shes coming for dinner next week",
@@ -54,7 +47,7 @@
       "description": "Check expiry on sauces",
       "priority": false,
       "id": 8,
-      "trash": true
+      "trash": false
     },
     {
       "todotitle": "Buy a new desk pad",
