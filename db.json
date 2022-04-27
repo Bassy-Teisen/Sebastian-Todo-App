@@ -15,25 +15,11 @@
       "trash": true
     },
     {
-      "todotitle": "Fill up dog food container",
-      "description": "Food is in the shed",
-      "priority": false,
-      "id": 5,
-      "trash": false
-    },
-    {
-      "todotitle": "Ring mum to see if shes coming for dinner next week",
-      "description": "Tell her to bring a salad",
-      "priority": false,
-      "id": 6,
-      "trash": false
-    },
-    {
       "todotitle": "Clean the pool fence glass",
       "description": "Try the new windex hose sprayer",
       "priority": false,
       "id": 7,
-      "trash": false
+      "trash": true
     },
     {
       "todotitle": "Clean out the fridge",
@@ -48,6 +34,13 @@
       "priority": false,
       "id": 9,
       "trash": false
+    },
+    {
+      "todotitle": "ryteugh",
+      "description": "This aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.",
+      "priority": false,
+      "trash": true,
+      "id": 10
     }
   ]
 }

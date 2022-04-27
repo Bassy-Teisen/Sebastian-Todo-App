@@ -5,7 +5,7 @@ import "../App.css"
 const TodoDelete = ({todo, sendBack, onDelete }) => {
 
     return (
-        <div  onDoubleClick={() => sendBack(todo.id)}>
+        <div className='max' onDoubleClick={() => sendBack(todo.id)}>
             <ListGroup as="ul">
                 <ListGroup.Item as="li" >
                     {/* displays todo title */}

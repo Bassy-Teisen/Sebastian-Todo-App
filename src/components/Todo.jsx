@@ -7,7 +7,7 @@ const Todo = ({todo, sendToTrash,  onToggle }) => {
     
     return (
         // captures the toggle of high to low priority
-    <div  onDoubleClick={() => onToggle(todo.id)}>
+    <div className='max' onDoubleClick={() => onToggle(todo.id)}>
             
                 <ListGroup as="ul">
                     <ListGroup.Item as="li" >
@@ -28,7 +28,6 @@ const Todo = ({todo, sendToTrash,  onToggle }) => {
                         {todo.priority ? <FcHighPriority  size={40} style={{ color: 'red', cursor: 'pointer' } }/>: <FcLowPriority size={40} style={{ color: 'green', cursor: 'pointer'}} /> }
                     </div>
                 </div>
-            <p></p>
         </div>
     )
 }
