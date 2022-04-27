@@ -23,7 +23,7 @@ const DeletedTodos = ({ onDelete, sendBack, onToggle }) => {
                     </Card>
                 ))}
                 </Row>
-                <Link to="/">Go Back</Link>
+                <Link style={{ fontSize: "1.5rem" }} to="/">Go Back</Link>
                 </Container>
         )
     }

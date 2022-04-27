@@ -8,20 +8,6 @@
       "trash": true
     },
     {
-      "updTodo": {
-        "updTodo": {
-          "todotitle": "Pick up cat medicine at vet",
-          "description": "Already paid for",
-          "priority": false,
-          "id": 2,
-          "trash": false
-        },
-        "id": 2,
-        "priority": true
-      },
-      "id": 2
-    },
-    {
       "todotitle": "Buy pool salt",
       "description": "Call in advance as they might be out.",
       "priority": false,
