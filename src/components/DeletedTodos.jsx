@@ -1,13 +1,16 @@
 import { Card, Row, Container } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import TodoDelete from "./TodoDelete"
+import { useTodosContext } from "../App"
 
-const DeletedTodos = ({todos, onDelete, sendBack, onToggle }) => {
 
+const DeletedTodos = ({ onDelete, sendBack, onToggle }) => {
+
+        const todos = useTodosContext()
         // sorts out the todos sent to trash and stores them in trashlist
         const trashList = []
         for (const [index, value] of todos.entries()) {
-            {value.binTodo ? trashList.push(value) : "" }
+            {value.trash ? trashList.push(value) : "" }
         }
 
         return (

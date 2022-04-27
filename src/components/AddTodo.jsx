@@ -4,15 +4,16 @@ import "../App.css"
 
 const AddTodo = ({ onAdd }) => {
     // the state of the todo's title, description and priority 
-    const [todoTitle, setTodoTitle] = useState('')
+    const [todotitle, setTodoTitle] = useState('')
     const [description, setDescription] = useState('')
-    const [high, setHighPriority] = useState(false)
+    const [priority, setHighPriority] = useState(false)
+    const [trash, setTrash] = useState(false)
 
     // sets todo state on submit
     const onSubmit = (e) => {
         e.preventDefault()
         // alert for improperly filled todo form
-        if(!todoTitle) {
+        if(!todotitle) {
             alert('Please add a task todo!')
             return
         }
@@ -21,10 +22,11 @@ const AddTodo = ({ onAdd }) => {
             return
         }
         // resets the form to blank
-        onAdd({ todoTitle, description, high })
+        onAdd({ todotitle, description, priority, trash })
         setTodoTitle("")
         setDescription("")
         setHighPriority(false)
+        setTrash(false)
     }
 
     return (
@@ -36,7 +38,7 @@ const AddTodo = ({ onAdd }) => {
             </Form.Label>
             <Col sm={10}>
                 {/* captures todo title input */}
-                <Form.Control type="text" placeholder="Todo" value={todoTitle} onChange={(e) => setTodoTitle(e.target.value)} />
+                <Form.Control type="text" placeholder="Todo" value={todotitle} onChange={(e) => setTodoTitle(e.target.value)} />
             </Col>
         </Form.Group>
         <Form.Group as={Row} className="mb-3" >
@@ -57,7 +59,7 @@ const AddTodo = ({ onAdd }) => {
                 <Form.Check.Input
                     aria-label="option 1"
                     id="formHorizontalRadios1"
-                    checked={ high } value={high} onChange={(e) => setHighPriority(e.currentTarget.checked)}
+                    checked={ priority } value={priority} onChange={(e) => setHighPriority(e.currentTarget.checked)}
                 />
             </Col>
         </Form.Group>
@@ -69,4 +71,5 @@ const AddTodo = ({ onAdd }) => {
         </Form>
     )
 }
+
 export default AddTodo
