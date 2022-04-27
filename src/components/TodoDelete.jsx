@@ -21,7 +21,7 @@ const TodoDelete = ({todo, sendBack, onDelete }) => {
                 <TiDeleteOutline size={40} style={{ color: 'red', cursor: 'pointer'}} onClick={() => onDelete(todo.id)} />
                 <div>
                     {/* adds todo pack to list */}
-                    <h6 className='double'>Add To List</h6>
+                    <h6 className='double'>Double Click To Add Back To List</h6>
                     <TiTick size={40} style={{ color: 'green', cursor: 'pointer'}}/>
                 </div>
             </div>

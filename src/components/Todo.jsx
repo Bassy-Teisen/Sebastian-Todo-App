@@ -24,8 +24,8 @@ const Todo = ({todo, sendToTrash,  onToggle }) => {
                     <AiFillDelete size={40} style={{ color: 'black', cursor: 'pointer'}} onClick={() => sendToTrash(todo.id)} />
                     <div>
                         {/* toggles high low priority of todo */}
-                        <h6 className='double'>Double Click</h6>
-                        {todo.priority ? <FcHighPriority size={40} style={{ color: 'red', cursor: 'pointer'} }/>: <FcLowPriority size={40} style={{ color: 'green', cursor: 'pointer'}} /> }
+                        <h6 className='double'>Double Click To Change Priority</h6>
+                        {todo.priority ? <FcHighPriority  size={40} style={{ color: 'red', cursor: 'pointer' } }/>: <FcLowPriority size={40} style={{ color: 'green', cursor: 'pointer'}} /> }
                     </div>
                 </div>
             <p></p>
